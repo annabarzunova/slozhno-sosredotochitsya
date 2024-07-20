@@ -311,7 +311,6 @@
   border: transparent;
   text-shadow: 2px 1px 0px var(--link-shadow);
   text-decoration: none;
-  border-bottom: 1px solid var(--text-color);
 }
 
 .article-text-link:hover {
@@ -323,7 +322,7 @@
 }
 
 .article-text-link:focus-visible {
-  outline: 1px solid var(--main-text-color);
+  outline: 1px solid var(--text-color);
 }
 
 .article__heading-regular {
@@ -444,7 +443,6 @@
 
   .footer__title {
     text-shadow: 2px 2px 0px var(--title-decor);
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
