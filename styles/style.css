@@ -66,14 +66,15 @@
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-left: -3%;
-    text-shadow: 4px 4px 0px var(--title-shadow);
     line-height: 99px;  
   }
 }
+
 @media (min-width: 1024px) {
   .header__title {
     margin-left: -2%;
     line-height: 129.53px;
+    text-shadow: 4px 4px 0 var(--title-shadow);
 }
 }
 
@@ -170,26 +171,27 @@
   line-height: 18px;
   text-align: center;
   background: transparent;
-  border: none;
+  border: 1px solid transparent;
   padding: 1.5px 13px;
   cursor: pointer;
 }
 
-.header__theme-menu-button_active {
-  pointer-events: none;
-  border: 1px solid;
+.header__theme-menu-button:focus {
+  outline: none;
+} 
+
+.header__theme-menu-button:focus-visible {
+ 
+  border-bottom: 1px solid var(--corners-color);
 }
 
 .header__theme-menu-button:hover {
   border: 1px solid var(--color-hover);
 }
 
-.header__theme-menu-button:focus {
-  border: none;
-}
-
-.header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--corners-color);
+.header__theme-menu-button_active {
+  
+  border: 1px solid var(--title-shadow);
 }
 
 .title-decor {
@@ -233,7 +235,6 @@
   font-weight: 700;
   color: var(--section-heading-color);
   line-height: 23.4px;
-  margin-bottom: 20px;
 }
 
 .section__article-group {
@@ -256,6 +257,11 @@
 }
 
 @media (min-width: 768px) {
+  .what {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
   .why {
     display: flex;
     flex-wrap: wrap;
@@ -269,7 +275,7 @@
 
   .why .section__article-group {
     flex: 0 0 auto;
-    width: 66%;
+    width: 65%;
   }
 
   .section__article-item {
@@ -282,6 +288,10 @@
 @media (min-width: 1024px) {
   .why .section__heading {
     width: 33%;
+  }
+
+  .why .section__article-group {
+    width: 66%;
   }
 
   .what .section__article-group {
@@ -323,6 +333,7 @@
 
 .article-text-link:focus-visible {
   outline: 1px solid var(--text-color);
+  border-bottom: none;
 }
 
 .article__heading-regular {
@@ -374,7 +385,7 @@
   height: auto;
 }
 
-@media (width <= 1024px) and (width >= 768px) {
+@media (min-width: 768px) {
   .section__images {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -431,7 +442,6 @@
   }
 
   .footer__title {
-    text-shadow: 2px 2px 0px var(--title-decor);
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
@@ -442,7 +452,7 @@
   }
 
   .footer__title {
-    text-shadow: 2px 2px 0px var(--title-decor);
+    text-shadow: 2px 2px 0px var(--title-shadow);
   }
 }
 
