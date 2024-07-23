@@ -13,7 +13,7 @@
       --title-color: #ffc2e6;
       --title-shadow: #ff0070;
       --title-decor: #ff8dcb;
-      --color-hover: 1px solid rgba(50, 49, 45, 0.4);
+      --color-hover: rgba(50, 49, 45, 0.4);
       --bg-color: #fff1f7;
       --background-image: url(../images/cover-image-light.png);
       --article-title-color: var(--text-color);
@@ -33,7 +33,7 @@
       --title-color: #ffc2e6;
       --title-shadow: #ff0070;
       --title-decor: #ff8dcb;
-      --color-hover: 1px solid rgba(50, 49, 45, 0.4);
+      --color-hover: rgba(50, 49, 45, 0.4);
       --bg-color: #fff1f7;
       --background-image: url(../images/cover-image-light.png);
       --article-title-color: var(--text-color);

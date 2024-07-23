@@ -11,7 +11,6 @@
   margin: 0 auto;
   font-size: 18px;
   font-weight: 400;
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
 .header {
@@ -28,14 +27,15 @@
   .header {
     min-block-size: 1024px;
     padding: 20px;
-  }}
+  }
+}
 
 @media (min-width: 1024px) {
   .header {
-  align-items: start;
-  padding: 20px;
-  min-block-size: 768px;
-}
+    align-items: start;
+    padding: 20px;
+    min-block-size: 768px;
+  }
 }
  
 .header__theme-menu-list {
@@ -75,7 +75,7 @@
     margin-left: -2%;
     line-height: 129.53px;
     text-shadow: 4px 4px 0 var(--title-shadow);
-}
+  }
 }
 
 .header__paragraph {
@@ -83,14 +83,15 @@
   font-weight: 700;
   line-height: 23.4px;
   align-self: center;
-  color: var(--text-title-color);
+  color: var(--article-title-color);
 }
 
 @media (min-width: 768px) {
   .header__paragraph { 
     justify-self: end;
     width: 50%;
-  }}
+  }
+}
 
 .decorated-zone::before {
   content: "";
@@ -181,7 +182,6 @@
 } 
 
 .header__theme-menu-button:focus-visible {
- 
   border-bottom: 1px solid var(--corners-color);
 }
 
@@ -190,13 +190,12 @@
 }
 
 .header__theme-menu-button_active {
-  
-  border: 1px solid var(--title-shadow);
+  border: 1px solid var(--corners-color);
+  pointer-events: none;
 }
 
 .title-decor {
   background-color: var(--title-decor);
-  color: var(--article-title-color);
 }
 
 .main {
@@ -229,6 +228,14 @@
 .section {
   line-height: 130%;
 }
+
+@media (max-width: 767px) {
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  }
 
 .section__heading {
   font-size: 18px;
@@ -311,6 +318,7 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
+  color: var(--article-title-color);
 }
 
 .color-title {
